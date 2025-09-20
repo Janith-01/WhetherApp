@@ -1,0 +1,295 @@
+@model WeatherApp.Models.WeatherViewModel
+@{
+    ViewData["Title"] = "Weather App";
+}
+
+<div class="container-fluid">
+    <!-- Search Section -->
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="card shadow">
+                <div class="card-body">
+                    <form asp-action="Search" method="post" class="row g-3">
+                        <div class="col-md-8">
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="fas fa-search"></i></span>
+                                <input type="text" name="city" class="form-control form-control-lg" 
+                                       placeholder="Enter city name..." value="@Model.CityName" required>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <button type="submit" class="btn btn-primary btn-lg w-100">
+                                <i class="fas fa-cloud-sun me-2"></i>Get Weather
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Error Message -->
+    @if (!string.IsNullOrEmpty(Model.ErrorMessage) || TempData["ErrorMessage"] != null)
+    {
+        <div class="row mb-4">
+            <div class="col-12">
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    <i class="fas fa-exclamation-triangle me-2"></i>
+                    @(Model.ErrorMessage ?? TempData["ErrorMessage"])
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                </div>
+            </div>
+        </div>
+    }
+
+    @if (!string.IsNullOrEmpty(Model.CityName))
+    {
+        <!-- Current Weather Section -->
+        <div class="row mb-4">
+            <div class="col-12">
+                <div class="card shadow">
+                    <div class="card-body">
+                        <div class="row align-items-center">
+                            <div class="col-md-8">
+                                <h1 class="display-4 mb-2">
+                                    <i class="fas fa-map-marker-alt text-primary me-2"></i>
+                                    @Model.CityName, @Model.Country
+                                </h1>
+                                <div class="d-flex align-items-center mb-3">
+                                    <img src="https://openweathermap.org/img/wn/@(Model.Icon)@@2x.png" 
+                                         alt="@Model.Description" class="me-3" style="width: 80px; height: 80px;">
+                                    <div>
+                                        <h2 class="mb-0">@Math.Round(Model.Temperature, 1)°C</h2>
+                                        <p class="text-muted mb-0">@Model.Description</p>
+                                        <small class="text-muted">Feels like @Math.Round(Model.FeelsLike, 1)°C</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="row text-center">
+                                    <div class="col-6 mb-3">
+                                        <div class="p-3 bg-light rounded">
+                                            <i class="fas fa-thermometer-half text-danger mb-2"></i>
+                                            <h6 class="mb-1">Min/Max</h6>
+                                            <small>@Math.Round(Model.MinTemp, 1)° / @Math.Round(Model.MaxTemp, 1)°</small>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 mb-3">
+                                        <div class="p-3 bg-light rounded">
+                                            <i class="fas fa-tint text-info mb-2"></i>
+                                            <h6 class="mb-1">Humidity</h6>
+                                            <small>@Model.Humidity%</small>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 mb-3">
+                                        <div class="p-3 bg-light rounded">
+                                            <i class="fas fa-wind text-warning mb-2"></i>
+                                            <h6 class="mb-1">Wind</h6>
+                                            <small>@Math.Round(Model.WindSpeed, 1) m/s</small>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 mb-3">
+                                        <div class="p-3 bg-light rounded">
+                                            <i class="fas fa-eye text-secondary mb-2"></i>
+                                            <h6 class="mb-1">Visibility</h6>
+                                            <small>@Model.Visibility km</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 5-Day Forecast Section -->
+        <div class="row mb-4">
+            <div class="col-12">
+                <div class="card shadow">
+                    <div class="card-header">
+                        <h5 class="mb-0"><i class="fas fa-calendar-alt me-2"></i>5-Day Forecast</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            @foreach (var forecast in Model.FiveDayForecast)
+                            {
+                                <div class="col-md-2 col-sm-4 col-6 mb-3">
+                                    <div class="text-center p-3 border rounded">
+                                        <h6 class="mb-2">@forecast.Date.ToString("ddd")</h6>
+                                        <img src="https://openweathermap.org/img/wn/@(forecast.Icon).png" 
+                                             alt="@forecast.Description" class="mb-2">
+                                        <p class="mb-1"><strong>@Math.Round(forecast.MaxTemp, 1)°</strong> / @Math.Round(forecast.MinTemp, 1)°</p>
+                                        <small class="text-muted">@forecast.Description</small>
+                                        <div class="mt-2">
+                                            <small><i class="fas fa-tint text-info me-1"></i>@forecast.Humidity%</small><br>
+                                            <small><i class="fas fa-wind text-warning me-1"></i>@Math.Round(forecast.WindSpeed, 1) m/s</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Weather Chart Section -->
+        <div class="row mb-4">
+            <div class="col-12">
+                <div class="card shadow">
+                    <div class="card-header">
+                        <h5 class="mb-0"><i class="fas fa-chart-line me-2"></i>24-Hour Weather Trends</h5>
+                    </div>
+                    <div class="card-body">
+                        <canvas id="weatherChart" width="400" height="200"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+
+    <!-- Search History Section -->
+    @if (Model.SearchHistory.Any())
+    {
+        <div class="row">
+            <div class="col-12">
+                <div class="card shadow">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                        <h5 class="mb-0"><i class="fas fa-history me-2"></i>Recent Searches</h5>
+                        <form asp-action="ClearHistory" method="post" class="d-inline">
+                            <button type="submit" class="btn btn-outline-danger btn-sm">
+                                <i class="fas fa-trash me-1"></i>Clear History
+                            </button>
+                        </form>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            @foreach (var search in Model.SearchHistory.Take(6))
+                            {
+                                <div class="col-md-2 col-sm-4 col-6 mb-2">
+                                    <a href="@Url.Action("Index", new { city = search.CityName })" 
+                                       class="btn btn-outline-primary btn-sm w-100">
+                                        <i class="fas fa-map-marker-alt me-1"></i>
+                                        @search.CityName
+                                        <br>
+                                        <small class="text-muted">@search.SearchTime.ToString("MM/dd HH:mm")</small>
+                                    </a>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+@section Scripts {
+    <script>
+        @if (!string.IsNullOrEmpty(Model.CityName))
+        {
+            <text>
+            // Load chart data when page loads
+            $(document).ready(function() {
+                loadWeatherChart('@Model.CityName');
+            });
+
+            function loadWeatherChart(city) {
+                $.get('@Url.Action("GetChartData", "Weather")', { city: city })
+                    .done(function(data) {
+                        if (data.error) {
+                            console.error('Error loading chart data:', data.error);
+                            return;
+                        }
+                        createWeatherChart(data);
+                    })
+                    .fail(function() {
+                        console.error('Failed to load chart data');
+                    });
+            }
+
+            function createWeatherChart(data) {
+                const ctx = document.getElementById('weatherChart').getContext('2d');
+                new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: data.labels,
+                        datasets: [{
+                            label: 'Temperature (°C)',
+                            data: data.temperatures,
+                            borderColor: 'rgb(255, 99, 132)',
+                            backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                            tension: 0.1,
+                            yAxisID: 'y'
+                        }, {
+                            label: 'Humidity (%)',
+                            data: data.humidity,
+                            borderColor: 'rgb(54, 162, 235)',
+                            backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                            tension: 0.1,
+                            yAxisID: 'y1'
+                        }, {
+                            label: 'Wind Speed (m/s)',
+                            data: data.windSpeed,
+                            borderColor: 'rgb(255, 205, 86)',
+                            backgroundColor: 'rgba(255, 205, 86, 0.2)',
+                            tension: 0.1,
+                            yAxisID: 'y2'
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        interaction: {
+                            mode: 'index',
+                            intersect: false,
+                        },
+                        scales: {
+                            x: {
+                                display: true,
+                                title: {
+                                    display: true,
+                                    text: 'Time'
+                                }
+                            },
+                            y: {
+                                type: 'linear',
+                                display: true,
+                                position: 'left',
+                                title: {
+                                    display: true,
+                                    text: 'Temperature (°C)'
+                                }
+                            },
+                            y1: {
+                                type: 'linear',
+                                display: true,
+                                position: 'right',
+                                title: {
+                                    display: true,
+                                    text: 'Humidity (%)'
+                                },
+                                grid: {
+                                    drawOnChartArea: false,
+                                },
+                            },
+                            y2: {
+                                type: 'linear',
+                                display: false,
+                                position: 'right',
+                                title: {
+                                    display: true,
+                                    text: 'Wind Speed (m/s)'
+                                },
+                                grid: {
+                                    drawOnChartArea: false,
+                                },
+                            }
+                        }
+                    }
+                });
+            }
+            </text>
+        }
+    </script>
+}

@@ -31,3 +31,37 @@ D:\JOB\Job 3\obj\Debug\net8.0\refint\WeatherApp.dll
 D:\JOB\Job 3\obj\Debug\net8.0\WeatherApp.pdb
 D:\JOB\Job 3\obj\Debug\net8.0\WeatherApp.genruntimeconfig.cache
 D:\JOB\Job 3\obj\Debug\net8.0\ref\WeatherApp.dll
+D:\JOB\Job 3\New folder\WhetherApp\bin\Debug\net8.0\appsettings.json
+D:\JOB\Job 3\New folder\WhetherApp\bin\Debug\net8.0\WeatherApp.staticwebassets.runtime.json
+D:\JOB\Job 3\New folder\WhetherApp\bin\Debug\net8.0\WeatherApp.exe
+D:\JOB\Job 3\New folder\WhetherApp\bin\Debug\net8.0\WeatherApp.deps.json
+D:\JOB\Job 3\New folder\WhetherApp\bin\Debug\net8.0\WeatherApp.runtimeconfig.json
+D:\JOB\Job 3\New folder\WhetherApp\bin\Debug\net8.0\WeatherApp.dll
+D:\JOB\Job 3\New folder\WhetherApp\bin\Debug\net8.0\WeatherApp.pdb
+D:\JOB\Job 3\New folder\WhetherApp\bin\Debug\net8.0\Microsoft.AspNetCore.JsonPatch.dll
+D:\JOB\Job 3\New folder\WhetherApp\bin\Debug\net8.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+D:\JOB\Job 3\New folder\WhetherApp\bin\Debug\net8.0\Newtonsoft.Json.dll
+D:\JOB\Job 3\New folder\WhetherApp\bin\Debug\net8.0\Newtonsoft.Json.Bson.dll
+D:\JOB\Job 3\New folder\WhetherApp\obj\Debug\net8.0\WeatherApp.csproj.AssemblyReference.cache
+D:\JOB\Job 3\New folder\WhetherApp\obj\Debug\net8.0\WeatherApp.GeneratedMSBuildEditorConfig.editorconfig
+D:\JOB\Job 3\New folder\WhetherApp\obj\Debug\net8.0\WeatherApp.AssemblyInfoInputs.cache
+D:\JOB\Job 3\New folder\WhetherApp\obj\Debug\net8.0\WeatherApp.AssemblyInfo.cs
+D:\JOB\Job 3\New folder\WhetherApp\obj\Debug\net8.0\WeatherApp.csproj.CoreCompileInputs.cache
+D:\JOB\Job 3\New folder\WhetherApp\obj\Debug\net8.0\WeatherApp.MvcApplicationPartsAssemblyInfo.cache
+D:\JOB\Job 3\New folder\WhetherApp\obj\Debug\net8.0\WeatherApp.RazorAssemblyInfo.cache
+D:\JOB\Job 3\New folder\WhetherApp\obj\Debug\net8.0\WeatherApp.RazorAssemblyInfo.cs
+D:\JOB\Job 3\New folder\WhetherApp\obj\Debug\net8.0\WeatherApp.sourcelink.json
+D:\JOB\Job 3\New folder\WhetherApp\obj\Debug\net8.0\staticwebassets.build.json
+D:\JOB\Job 3\New folder\WhetherApp\obj\Debug\net8.0\staticwebassets.development.json
+D:\JOB\Job 3\New folder\WhetherApp\obj\Debug\net8.0\staticwebassets\msbuild.WeatherApp.Microsoft.AspNetCore.StaticWebAssets.props
+D:\JOB\Job 3\New folder\WhetherApp\obj\Debug\net8.0\staticwebassets\msbuild.build.WeatherApp.props
+D:\JOB\Job 3\New folder\WhetherApp\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.WeatherApp.props
+D:\JOB\Job 3\New folder\WhetherApp\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.WeatherApp.props
+D:\JOB\Job 3\New folder\WhetherApp\obj\Debug\net8.0\staticwebassets.pack.json
+D:\JOB\Job 3\New folder\WhetherApp\obj\Debug\net8.0\scopedcss\bundle\WeatherApp.styles.css
+D:\JOB\Job 3\New folder\WhetherApp\obj\Debug\net8.0\WeatherApp.csproj.Up2Date
+D:\JOB\Job 3\New folder\WhetherApp\obj\Debug\net8.0\WeatherApp.dll
+D:\JOB\Job 3\New folder\WhetherApp\obj\Debug\net8.0\refint\WeatherApp.dll
+D:\JOB\Job 3\New folder\WhetherApp\obj\Debug\net8.0\WeatherApp.pdb
+D:\JOB\Job 3\New folder\WhetherApp\obj\Debug\net8.0\WeatherApp.genruntimeconfig.cache
+D:\JOB\Job 3\New folder\WhetherApp\obj\Debug\net8.0\ref\WeatherApp.dll

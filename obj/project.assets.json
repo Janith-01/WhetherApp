@@ -248,11 +248,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\JOB\\Job 3\\WeatherApp.csproj",
+      "projectUniqueName": "D:\\JOB\\Job 3\\New folder\\WhetherApp\\WeatherApp.csproj",
       "projectName": "WeatherApp",
-      "projectPath": "D:\\JOB\\Job 3\\WeatherApp.csproj",
+      "projectPath": "D:\\JOB\\Job 3\\New folder\\WhetherApp\\WeatherApp.csproj",
       "packagesPath": "C:\\Users\\janiya\\.nuget\\packages\\",
-      "outputPath": "D:\\JOB\\Job 3\\obj\\",
+      "outputPath": "D:\\JOB\\Job 3\\New folder\\WhetherApp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\janiya\\AppData\\Roaming\\NuGet\\NuGet.Config",

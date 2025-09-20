@@ -1,23 +1,23 @@
 {
   "Files": [
     {
-      "Id": "D:\\JOB\\Job 3\\wwwroot\\css\\site.css",
+      "Id": "D:\\JOB\\Job 3\\New folder\\WhetherApp\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
-      "Id": "D:\\JOB\\Job 3\\wwwroot\\js\\site.js",
+      "Id": "D:\\JOB\\Job 3\\New folder\\WhetherApp\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
-      "Id": "D:\\JOB\\Job 3\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Id": "D:\\JOB\\Job 3\\New folder\\WhetherApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Id": "D:\\JOB\\Job 3\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Id": "D:\\JOB\\Job 3\\New folder\\WhetherApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Id": "D:\\JOB\\Job 3\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Id": "D:\\JOB\\Job 3\\New folder\\WhetherApp\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
     },
     {

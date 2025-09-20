@@ -9,35 +9,35 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = WeatherApp
 build_property.RootNamespace = WeatherApp
-build_property.ProjectDir = D:\JOB\Job 3\
+build_property.ProjectDir = D:\JOB\Job 3\New folder\WhetherApp\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\JOB\Job 3
+build_property.MSBuildProjectDirectory = D:\JOB\Job 3\New folder\WhetherApp
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/JOB/Job 3/Views/Home/Privacy.cshtml]
+[D:/JOB/Job 3/New folder/WhetherApp/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/JOB/Job 3/Views/Shared/Error.cshtml]
+[D:/JOB/Job 3/New folder/WhetherApp/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/JOB/Job 3/Views/Shared/_Layout.cshtml]
+[D:/JOB/Job 3/New folder/WhetherApp/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/JOB/Job 3/Views/Weather/Index.cshtml]
+[D:/JOB/Job 3/New folder/WhetherApp/Views/Weather/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV2VhdGhlclxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/JOB/Job 3/Views/_ViewImports.cshtml]
+[D:/JOB/Job 3/New folder/WhetherApp/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/JOB/Job 3/Views/_ViewStart.cshtml]
+[D:/JOB/Job 3/New folder/WhetherApp/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
