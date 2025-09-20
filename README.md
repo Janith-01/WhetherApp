@@ -27,12 +27,12 @@ A comprehensive weather application built with ASP.NET Core that provides real-t
 
 3. **Configure the API key**:
    - Open `appsettings.json`
-   - Replace `YOUR_API_KEY_HERE` with your actual API key:
+   - Replace `##########` with your actual API key:
    ```json
    {
      "WeatherApi": {
        "BaseUrl": "https://api.openweathermap.org/data/2.5",
-       "ApiKey": "your_actual_api_key_here"
+       "ApiKey": "##############"
      }
    }
    ```
